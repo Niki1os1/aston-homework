@@ -25,8 +25,8 @@ public class PuttingIntoPractice {
         //1. Найти все транзакции за 2011 год и отсортировать их по сумме (от меньшей
         //к большей).
         List<Transaction> sortedTransactionsFor2011 = transactions.stream()
-                .sorted(Comparator.comparingInt(Transaction::getValue))
                 .filter(transaction -> transaction.getYear() == 2011)
+                .sorted(Comparator.comparingInt(Transaction::getValue))
                 .toList();
         System.out.println(sortedTransactionsFor2011);
 
